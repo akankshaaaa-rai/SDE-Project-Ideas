@@ -1,0 +1,33 @@
+{
+  "name": "code-executer",
+  "version": "1.0.0",
+  "description": "Remote Code Execution App",
+  "private": true,
+  "main": "Server.js",
+  "scripts": {
+    "start": "nodemon Server.js",
+    "client": "cd ../frontend && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"yarn start\" \"yarn run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulonteri/code-executer.git"
+  },
+  "author": "Paul Onteri - https://paulonteri.com/",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulonteri/code-executer/issues"
+  },
+  "homepage": "https://github.com/paulonteri/code-executer#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
